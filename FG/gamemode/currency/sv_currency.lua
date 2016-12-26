@@ -15,3 +15,14 @@ function meta:SetCurrency(amount)
 	Currency[self:SteamID()] = amount;	
 	ply:SetNWInt("currency", amount);
 end
+
+// I'd like to make a detection system for this
+// But other players can tamper with others
+timer.Create("currency_reset_tampering", 5, 0, function()
+	for k,v in next, player.GetAll() do 
+		if (v:GetNWInt("currency") != Currency[v:SteamID()]) then
+			// Detected tampering of currency		
+		end
+		v:SetNWInt("currency", Currency[v:SteamID()]);
+	end
+end)
