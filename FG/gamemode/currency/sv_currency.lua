@@ -8,9 +8,7 @@ local Currency = {};
 hook.Add("PlayerInitialSpawn", "currency", function(ply)
 	Currency[ply:SteamID()] = 0;
 	ply:SetNWInt("currency", 0);
-	if (GAMEMODE.Config.StoreCurrency) then
-		flLib:Append(ply:SteamID(), 0);		
-	end
+	flLib:Append(ply:SteamID(), 0);		
 end);
 
 hook.Add("PlayerDisconnected", "currency", function(ply)
