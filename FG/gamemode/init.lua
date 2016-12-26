@@ -5,10 +5,12 @@ include("shared.lua")
 AddCSLuaFile("spawn_in/cl_spawn_in.lua")
 include("spawn_in/sv_spawn_in.lua")
 
-AddCSLuaFile "link/cl_link.lua";
-include "sv_link.lua";
+AddCSLuaFile "link/cl_link.lua"
+include "sv_link.lua"
 
 include "death_sounds/sv_death_sounds.lua"
+
+AddCSLuaFile "hud/cl_hud.lua"
 
 GM.Config = GM.Config or {}
 
