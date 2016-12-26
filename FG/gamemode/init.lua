@@ -12,8 +12,6 @@ include "death_sounds/sv_death_sounds.lua"
 
 AddCSLuaFile "hud/cl_hud.lua"
 
-GM.Config = GM.Config or {}
-
 function GM:PlayerConnect(name)
 	bcChat(Color(0, 255, 255), "Colonist ", name, " has connected.");
 end
