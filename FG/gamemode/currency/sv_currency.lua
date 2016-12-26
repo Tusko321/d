@@ -8,7 +8,7 @@ local Currency = {};
 hook.Add("PlayerInitialSpawn", "currency", function(ply)
 	Currency[ply:SteamID()] = 0;
 	ply:SetNWInt("currency", 0);
-	flLib:Append(ply:SteamID(), 0);		
+	flLib:Append("currency.txt", ply:SteamID(), 0);		
 end);
 
 hook.Add("PlayerDisconnected", "currency", function(ply)
@@ -22,7 +22,7 @@ end
 function meta:SetCurrency(amount)
 	Currency[self:SteamID()] = amount;	
 	ply:SetNWInt("currency", amount);
-	flLib:Append(ply:SteamID(), amount);
+	flLib:Append("currency.txt", ply:SteamID(), amount);
 end
 
 // I'd like to make a detection system for this
