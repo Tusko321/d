@@ -21,3 +21,7 @@ function flLib:Gather() CheckFile();
 
 	return contents;
 end
+
+function flLib:ContentsByID(guid)
+	return flLib:Gather()[guid]
+end
