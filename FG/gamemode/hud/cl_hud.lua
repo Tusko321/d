@@ -15,7 +15,7 @@ local function base()
 end
 
 local function plyStats()
-	draw.DrawText("Credits : ".. LocalPlayer():GetCredits(),"Trebuchet18",300,ScrH() - 210,Color(0,0,0,255),TEXT_ALIGN_LEFT)
+	draw.DrawText("Credits : ".. LocalPlayer():GetCurrency(),"Trebuchet18",300,ScrH() - 210,Color(0,0,0,255),TEXT_ALIGN_LEFT)
 	draw.DrawText("Role : ".. LocalPlayer():GetRole(),"Trebuchet18",300,ScrH() - 190,Color(0,0,0,255),TEXT_ALIGN_LEFT)
 end
 
