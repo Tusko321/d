@@ -5,6 +5,8 @@ include("shared.lua")
 AddCSLuaFile("spawn_in/cl_spawn_in.lua")
 include("spawn_in/sv_spawn_in.lua")
 
+GM.Config = GM.Config or {}
+
 function GM:PlayerConnect(name)
 	print("Colonist".. name.." is connecting")
 end
