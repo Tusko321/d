@@ -1,3 +1,5 @@
+// code by biggie cheese
+
 util.AddNetworkString("bcChat");
 
 function bcChat(...)
