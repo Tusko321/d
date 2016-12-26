@@ -1,3 +1,5 @@
+// Code by biggie cheese
+
 flLib = {};
 
 local function CheckFile()
