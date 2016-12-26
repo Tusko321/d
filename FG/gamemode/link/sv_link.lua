@@ -1,3 +1,5 @@
+util.AddNetworkString("bcChat");
+
 function bcChat(...)
 	net.Start("bcChat");
 	net.WriteTable({...});
