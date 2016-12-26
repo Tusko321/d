@@ -11,9 +11,9 @@ include "sv_link.lua";
 GM.Config = GM.Config or {}
 
 function GM:PlayerConnect(name)
-	print("Colonist".. name.." is connecting")
+	bcChat(Color(0, 255, 255), "Colonist ", name, " has connected.");
 end
 
 function GM:PlayerInitialSpawn(ply)
-	print("Colonist ".. ply:Name().." has spawned.")
+	bcChat(Color(0, 255, 255), "Colonist ", name, " has spawned.");
 end
