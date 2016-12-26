@@ -7,6 +7,10 @@ hook.Add("PlayerInitialSpawn", "currency", function(ply)
 	ply:SetNWInt("currency", 0);
 end);
 
+hook.Add("PlayerDisconnected", "currency", function(ply)
+	Currency[ply:SteamID()] = nil;
+end);
+
 local meta = FindMetaTable("Player");
 function meta:GetCurrency()
 	return Currency[self:SteamID()];	
