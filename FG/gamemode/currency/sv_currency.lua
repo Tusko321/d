@@ -1,11 +1,16 @@
 // code by biggie cheese
 
+include "fllib/sv_fllib.lua"
+
 // Localized so no one can tamper with it
 local Currency = {};
 
 hook.Add("PlayerInitialSpawn", "currency", function(ply)
 	Currency[ply:SteamID()] = 0;
 	ply:SetNWInt("currency", 0);
+	if (GAMEMODE.Config.StoreCurrency) then
+		flLib:Append(ply:SteamID(), 0);		
+	end
 end);
 
 hook.Add("PlayerDisconnected", "currency", function(ply)
@@ -19,6 +24,7 @@ end
 function meta:SetCurrency(amount)
 	Currency[self:SteamID()] = amount;	
 	ply:SetNWInt("currency", amount);
+	flLib:Append(ply:SteamID(), amount);
 end
 
 // I'd like to make a detection system for this
