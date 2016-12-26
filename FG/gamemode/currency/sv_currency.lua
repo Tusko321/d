@@ -1,5 +1,6 @@
 // code by biggie cheese
 
+// Localized so no one can tamper with it
 local Currency = {};
 
 hook.Add("PlayerInitialSpawn", "currency", function(ply)
