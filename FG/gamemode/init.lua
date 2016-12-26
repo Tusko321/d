@@ -8,7 +8,7 @@ include("spawn_in/sv_spawn_in.lua")
 AddCSLuaFile "link/cl_link.lua";
 include "sv_link.lua";
 
-AddCSLuaFile "death_sounds/cl_sounds.lua"
+include "death_sounds/sv_death_sounds.lua"
 
 GM.Config = GM.Config or {}
 
