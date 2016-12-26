@@ -30,5 +30,5 @@ end
 CreateRole("Citizen", {
 	color = Color(0, 234, 0),
 	joinFunction = function(ply) return true end
-});
+})
 */
